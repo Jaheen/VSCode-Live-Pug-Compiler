@@ -2,7 +2,7 @@
 	"name": "live-pug-compiler",
 	"displayName": "live-pug-compiler",
 	"description": "Compile pug into HTML at real time.",
-	"publisher": "jaheenafsarsyedks",
+	"publisher": "jaheenafsarsyed",
 	"icon": "images/pug.png",
 	"repository": {
 		"url": "https://github.com/Jaheen/VSCode-Live-Pug-Compiler.git"
