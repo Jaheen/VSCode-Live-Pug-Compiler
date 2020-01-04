@@ -1,0 +1,77 @@
+{
+	"name": "live-pug-compiler",
+	"displayName": "live-pug-compiler",
+	"description": "Compile pug into HTML at real time.",
+	"publisher": "jaheenafsarsyedks",
+	"icon": "images/pug.png",
+	"repository": {
+		"url": "https://github.com/Jaheen/VSCode-Live-Pug-Compiler.git"
+	},
+	"author": {
+		"name": "Jaheen Afsar Syed",
+		"email": "jaheenafsarsyedks@outlook.com"
+	},
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:**/*.pug",
+		"onLanguage:pug"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "livePugCompiler.startCompiler",
+				"title": "Start Pug Compiler"
+			},
+			{
+				"command": "livePugCompiler.stopCompiler",
+				"title": "Stop Pug Compiler"
+			},
+			{
+				"command": "livePugCompiler.compileOnce",
+				"title": "Compile All Pug Files Once"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Live Pug Compiler Settings",
+				"properties": {
+					"livePugCompiler.savePath": {
+						"title": "Save Path",
+						"type": "string",
+						"default": "/Compiled-HTML",
+						"description": "The path to which the compiled HTML files will be saved.\n / refers to the workspace root."
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/pug": "^2.0.4",
+		"@types/vscode": "^1.39.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"pug": "^2.0.4"
+	}
+}
