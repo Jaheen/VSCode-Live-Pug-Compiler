@@ -1,7 +1,7 @@
 {
 	"name": "live-pug-compiler",
-	"displayName": "live-pug-compiler",
-	"description": "Compile pug into HTML at real time.",
+	"displayName": "Live Pug Compiler",
+	"description": "Compile Pug to HTML at realtime with live browser reload.",
 	"publisher": "jaheenafsarsyed",
 	"icon": "images/pug.png",
 	"repository": {
