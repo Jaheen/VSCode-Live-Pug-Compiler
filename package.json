@@ -47,6 +47,24 @@
 						"type": "string",
 						"default": "/Compiled-HTML",
 						"description": "The path to which the compiled HTML files will be saved.\n / refers to the workspace root."
+					},
+					"livePugCompiler.saveExt": {
+						"title":				"Files extension",
+						"type":					"string",
+						"default":				"html",
+						"description":			"Extension of compiled files. HTML, PHP or Other. Default is html files."
+					},
+					"livePugCompiler.uScoreCompile": {
+						"title":				"Вспомогательные файлы",
+						"type":					"boolean",
+						"default":				false,
+						"description":			"Compile with underscore on begin filename. Default is not compile."
+					},
+					"livePugCompiler.startFolder": {
+						"title":				"Начальный путь",
+						"type":					"string",
+						"default":				"/",
+						"description":			"Root path to pugs files for compilation. Default is workspace root path."
 					}
 				}
 			}
